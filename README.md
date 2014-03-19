@@ -21,7 +21,7 @@ You must also provide the username and password for a Jira account.  These can b
 
 ### Downloading Issues From Jira
 
-The cucumber-jira formatter is intended to be used with the [jira-maven-plugin](https://github.com/nalbion/jira-maven-plugin) 
+The cucumber-jira formatter is intended to be used with the [jira-maven-plugin](https://github.com/nalbion/jira-maven-plugin/tree/feature/generate-cucumber-features) 
 for a complete "round trip" solution.
 
 ```
@@ -44,7 +44,7 @@ The primary child elements "passed", "failed" and "skipped" map to the result of
 There is a "before" element at the same level, which allows Jira transitions to be executed before the scenario is executed.
 
 Within these elements, the "self" element describes transitions that should be executed on the issue 
-that is mapped to the scenario (by a tag prefixed with "@issue_" - see [jira-maven-plugin](https://github.com/nalbion/jira-maven-plugin)).
+that is mapped to the scenario (by a tag prefixed with "@issue_" - see [jira-maven-plugin](https://github.com/nalbion/jira-maven-plugin/tree/feature/generate-cucumber-features)).
 There may also be other "relationship" elements that are named after linked Jira issues - eg "depends_on".
 
 Within the "self" and the relationship elements you may provide a transition configuration element
