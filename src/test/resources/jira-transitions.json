@@ -1,0 +1,60 @@
+{
+	"before": {
+		"self": {
+			"Not Run": {
+				"transition": "Testing in progress"
+			},
+			"Test Failed": {
+				"transition": "Testing in progress"
+			},
+			"Test Passed": {
+				"transition": "Retest"
+			}
+		}
+	},
+
+	"passed": {
+		"self": {
+			"*": {
+				"transition": "Passed",
+				"unless": "Test Passed",
+				"fields": {
+					"assignee": null
+				}
+			}
+		},
+		
+		"depends_on" : {
+		
+		}
+	},
+	
+	"failed": {
+		"self": {
+			"*": {
+				"transition": "Failed",
+				"unless": "Test Failed",
+				"fields": {
+					"assignee": "${reporter}"
+				}
+			}
+		},
+		
+		"depends_on" : {
+		
+		}
+	},
+	
+	"skipped": {
+		"self": {
+			"*": {
+				"transition": "Back to Not Run",
+				"unless": "Not Run"
+			}
+		},
+		
+		"depends_on" : {
+		
+		}
+	}
+}
