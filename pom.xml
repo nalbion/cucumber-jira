@@ -68,4 +68,17 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+	<distributionManagement>
+	    <repository>
+	    	<name>3rd party</name>
+			<id>thirdparty</id>
+			<url>http://10.54.246.21:8081/nexus/content/repositories/thirdparty</url>
+		</repository>
+		<snapshotRepository>
+			<name>3rd party snapshots</name>
+			<id>thirdparty-snapshots</id>
+			<url>http://10.54.246.21:8081/nexus/content/repositories/thirdparty-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
